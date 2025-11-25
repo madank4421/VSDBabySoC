@@ -63,7 +63,7 @@ Image credits: https://www.vlsisystemdesign.com/
 ## RVMYTH: RISC-V Based Processor 
 
 ### Introduction
-The RVMYTH processor is a compact, behavioral implementation of a RISC-V–based CPU designed for educational and simulation purposes. It follows the RV32I instruction set and implements a basic 3-stage pipeline (Fetch, Decode, Execute). This processor is commonly used in learning environments to understand RISC-V microarchitecture, instruction flow, and CPU datapath behavior. 
+The RVMYTH processor is a compact RISC-V–based CPU designed for educational and simulation purposes. It follows the RV32I instruction set and implements a basic 3-stage pipeline (Fetch, Decode, Execute). This processor is commonly used in learning environments to understand RISC-V microarchitecture, instruction flow, and CPU datapath behavior. 
 
 
 ### Processor Specifications
@@ -78,7 +78,7 @@ The memory subsystem includes a 4 KB instruction memory used exclusively for sto
 ## AVSDDAC 
 
 ### Introduction
-The `avsddac` module is a behavioral Verilog model of a 10-bit Digital-to-Analog Converter (DAC). It converts a 10-bit digital input into a corresponding analog output voltage between two reference levels.
+The `avsddac` module is a 10-bit Digital-to-Analog Converter (DAC). It converts a 10-bit digital input into a corresponding analog output voltage between two reference levels.
 
 
 ### DAC Specifications
@@ -93,7 +93,7 @@ The DAC output updates continuously in response to any change in the digital inp
 ## AVSDPLL 
 
 #### Introduction
-The `avsdpll` module is a behavioral Verilog model of a Phase-Locked Loop (PLL) used for functional simulation. It generates an output clock whose frequency is derived from the reference input clock. 
+The `avsdpll` module is a Phase-Locked Loop (PLL) used for functional simulation. It generates an output clock whose frequency is derived from the reference input clock. 
 
 
 #### PLL Specifications
