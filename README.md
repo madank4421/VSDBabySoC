@@ -1058,7 +1058,7 @@ Once completed, results are written to:
 ![Alt text](images/sta_files.png)
 
 
-## **Post-Layout Timing Report Table**
+## **Post-Route Timing Report Table**
 
 ![Alt text](images/table2.png)
 
