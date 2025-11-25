@@ -909,9 +909,11 @@ read_def /home/madank/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/bas
 
 #### 5. Set up the parasitic extraction models
 
-Create the `external-resources/` directory and clone open_pdks:
+Create the `external-resources/` directory and clone open_pdks inside it:
 
-```
+```bash
+mkdir external-resources
+cd external-resources/
 git clone https://github.com/RTimothyEdwards/open_pdks.git
 ```
 
