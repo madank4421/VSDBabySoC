@@ -1,6 +1,6 @@
 # VSDBabySoC
 
-VSDBabySoC is a compact yet powerful System-on-Chip that integrates a RISC-V CPU (RVMYTH), a PLL, and a DAC into a minimal, fully functional digital SoC architecture. This Document contains the entire flow from definition and architecture to post-layout routing. 
+VSDBabySoC is a compact yet powerful System-on-Chip that integrates a RISC-V CPU (RVMYTH), a PLL, and a DAC into a minimal, fully functional digital SoC architecture. This Document contains the entire flow from definition and architecture to post-layout routing of VSDBabySoC. 
 
 # **Table of Contents**
 
