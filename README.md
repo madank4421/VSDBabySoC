@@ -566,6 +566,8 @@ In this design:
 * Path `_9108_ -> _8046_` has **0.3096 ns slack** . Thus it  meets hold time.
 * Path `_9085_ -> _8462_` has **2.2603 ns slack** . Thus it meets setup time and represents the critical path.
 
+## **Post-Synthesis Timing Report Table**
+
 ![table](images/table.png)
 
 
@@ -1061,7 +1063,7 @@ Once completed, results are written to:
 ![Alt text](images/table2.png)
 
 
-## **Post-synthesis vs Post-route Timing Comparison**
+## **Post-synthesis (week 3) vs Post-route (week 8) Timing Comparison**
 
 ![Alt text](images/table3.png)
 
