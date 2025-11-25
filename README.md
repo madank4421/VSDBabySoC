@@ -1050,7 +1050,7 @@ sta /home/madank/OpenSTA/examples/BabySoC/sta_across_pvt_route.tcl
 Once completed, results are written to:
 
 ```
-/OpenSTA/examples/BabySoC/STA_OUTPUT/route/
+~/OpenSTA/examples/BabySoC/STA_OUTPUT/route/
 ```
 
 ![Alt text](images/sta_files.png)
