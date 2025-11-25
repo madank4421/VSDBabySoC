@@ -571,7 +571,7 @@ In this design:
 
 # Physical Design of VSDBabySoC
 
-Physical design transforms the synthesized digital logic (gate-level netlist) into a manufacturable layout. For VSDBabySoC, OpenROAD is used to automate the complete RTL-to-GDSII flow.
+Physical design transforms the synthesized digital logic (gate-level netlist) into a manufacturable layout. For VSDBabySoC, OpenROAD is used to automate the complete design flow.
 
 OpenROAD is an open-source, end-to-end physical design toolchain capable of executing synthesis, floorplanning, placement, clock tree synthesis, routing, parasitic extraction, and final signoff steps. Its goal is autonomous chip design, with minimal manual intervention.
 
