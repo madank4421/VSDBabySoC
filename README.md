@@ -1086,7 +1086,7 @@ During the Physical Design of the VSDBabySoC, a routing congestion issue may occ
 
 This error appears because the routing capacity at the DAC macro’s OUT port is 0, while the router needs a usage of 1, leading to overflow = 1.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The congestion specifically occurs at the OUT port of the DAC macro.
 
 Below is the congestion visualization from the DRC window of OpenROAD GUI:
@@ -1121,7 +1121,10 @@ After removing those obstructions, the OUT port becomes accessible:
 
 ![image](images/avsddac.png)
 
-This fix typically resolves the congestion problem as it did for me.
+>[!NOTE]
+>
+> This fix typically resolves the congestion problem as it did for me.
+>
 
 ## Additional Steps if Congestion Persists
 
