@@ -1117,8 +1117,6 @@ However, further down in the same LEF file, we see two obstruction layers (highl
 ![image](images/oldavsddac.png)
 
 
-![image](images/obs_before.png)
-
 These obstructions prevent routing through that area, causing the congestion. So these Obstructions need to be cleared.
 
 ## Solution: Remove the Obstructions
@@ -1127,8 +1125,6 @@ After removing those obstructions, the OUT port becomes accessible:
 
 ![image](images/avsddac.png)
 
-
-![image](images/obs_after.png)
 
 >[!NOTE]
 >
