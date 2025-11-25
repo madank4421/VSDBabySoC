@@ -563,8 +563,8 @@ Fanout       Cap      Slew     Delay      Time   Description
 
 In this design:
 
-* Path `_9108_ → _8046_` has **0.3096 ns slack** . Thus it  meets hold time.
-* Path `_9085_ → _8462_` has **2.2603 ns slack** . Thus it meets setup time and represents the critical path.
+* Path `_9108_ -> _8046_` has **0.3096 ns slack** . Thus it  meets hold time.
+* Path `_9085_ -> _8462_` has **2.2603 ns slack** . Thus it meets setup time and represents the critical path.
 
 ![table](images/table.png)
 
