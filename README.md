@@ -191,7 +191,7 @@ In GTKWave, first, Right-click on OUT (DAC output) then Select Data Format -> An
 * **RV_TO_DAC[9:0]** – 10-bit digital output from RVMYTH register #17.
 * **OUT (real)** – A `real` wire inside the DAC module used to model analog behaviour.
 
-This completes the modelling workflow of the VSDBabySoC using TL-Verilog, SandPiper-SaaS, Icarus Verilog, and GTKWave.
+This completes the modelling and simulation workflow of the VSDBabySoC using Icarus Verilog, and GTKWave.
 
 # Post-Synthesis (Gate-Level) Simulation of VSDBabySoC
 
