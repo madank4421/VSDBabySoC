@@ -36,8 +36,9 @@ VSDBabySoC is a compact yet powerful System-on-Chip that integrates a RISC-V CPU
   - [Creating Post-Route DEF File](#creating-post-route-def-file)
   - [Generating Post-Route SPEF File](#generating-post-route-spef-file)
 - [Post-route STA of VSDBabySoC](#post-route-sta-of-vsdbabysoc)
-- [⚠️ Routing Congestion Problem](#️-routing-congestion-problem)
+- [Routing Congestion Problem](#️-routing-congestion-problem)
   - [Why Capacity is 0 at DAC OUT Port](#why-is-the-capacity-0-at-the-dac-out-port)
+  - [Solution: Remove Obstructions](#solution-remove-the-obstructions)
   - [Additional Solutions if Congestion Persists](#additional-steps-if-congestion-persists)
     
 ---
@@ -842,7 +843,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 > 
 > This indicates routing congestion during global routing.
 >
-> The cause of this congestion and the method to fix it are explained **here** (link to be added).
+> The cause of this congestion and the method to fix it are explained [HERE](#️-routing-congestion-problem)
 
 
 
@@ -1088,7 +1089,7 @@ This error appears because the routing capacity at the DAC macro’s OUT port is
 > [!NOTE]
 > The congestion specifically occurs at the OUT port of the DAC macro.
 
-Below is the congestion visualization:
+Below is the congestion visualization from the DRC window of OpenROAD GUI:
 
 ![image](images/1.png)
 
@@ -1096,11 +1097,10 @@ Below is the congestion visualization:
 
 ![image](images/3.png)
 
-From these images, we observe:
+At the OUT port of the DAC, From these images, we observe:
 - Capacity = 0
 - Usage = 1
 - Overflow = 1  
-at the OUT port of the DAC.
 
 
 ## Why is the Capacity 0 at the DAC OUT Port?
@@ -1109,11 +1109,14 @@ Looking into the `avsddac.lef` file, the OUT port is defined at the location sho
 
 ![image](images/out_port.png)
 
-However, further down in the same LEF file, we see two obstruction layers (highlighted that completely block the OUT port region:
+However, further down in the same LEF file, we see two obstruction layers (highlighted) that completely block the OUT port region:
 
 ![image](images/oldavsddac.png)
 
-These obstructions prevent routing through that area, causing the congestion.  
+These obstructions prevent routing through that area, causing the congestion. So these Obstructions need to be cleared.
+
+## Solution: Remove the Obstructions
+
 After removing those obstructions, the OUT port becomes accessible:
 
 ![image](images/avsddac.png)
@@ -1152,9 +1155,9 @@ export MACRO_PLACE_HALO=40
 
 Encourage the router to use higher metal layers by adjusting routing settings:
 
-* `ROUTING_LAYER_ADJUSTMENT`
-* `MIN_ROUTING_LAYER`
-* `MAX_ROUTING_LAYER`
+* `ROUTING_LAYER_ADJUSTMENT` (set this to a lower value to force the router to use higher metal layers. Default value is 0.5) 
+* `MIN_ROUTING_LAYER` to define the minimum layer
+* `MAX_ROUTING_LAYER` to define the maximum layer
 
 ### 5. Increase Core Area / Utilization
 
@@ -1167,7 +1170,7 @@ Expanding the core area provides more routing room. Adjust:
 
 Relax IO pin placement to avoid congested regions:
 
-* Use the `PLACE_PINS_ARGS` variable.
+* Modify the `PLACE_PINS_ARGS` variable to try different pin placements.
 
 With these corrections and tuning strategies, routing congestion around the DAC OUT port can be eliminated most of the time, ensuring smooth global and detailed routing during the physical design flow.
 
