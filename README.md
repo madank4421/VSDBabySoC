@@ -1027,7 +1027,7 @@ current_design vsdbabysoc
 ###############################################################################
 # Clock Definition
 ###############################################################################
-create_clock -name clk -period 110.0000 [get_pins {pll/CLK}]
+create_clock -name clk -period 11.0000 [get_pins {pll/CLK}]
 set_propagated_clock [get_clocks {clk}]
 ###############################################################################
 # Additional constraints, if any, will appear here
