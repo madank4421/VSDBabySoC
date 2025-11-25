@@ -966,7 +966,7 @@ Using this scripted flow, we can run STA across multiple PVT corners, gather set
 <details>
 <summary><strong>👈 Click to view</strong></summary>
 
-```
+```bash
 set list_of_lib_files(1) "sky130_fd_sc_hd__tt_025C_1v80.lib"
 set list_of_lib_files(2) "sky130_fd_sc_hd__ff_100C_1v65.lib"
 set list_of_lib_files(3) "sky130_fd_sc_hd__ff_100C_1v95.lib"
